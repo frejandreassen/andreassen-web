@@ -34,12 +34,12 @@ export default function About({ cv }) {
         <TopNav/>
 
         <section className="py-26 bg-white lg:w-11/12">
-          <div className="container px-4 mx-auto">
+          <div className="container md:px-4 mx-auto">
             <div className="flex flex-wrap mx-4 mb-12 items-center">
-              <div className="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
+              <div className="w-full lg:w-1/2 md:px-4 mb-8 lg:mb-0">
                 <img className="block w-full border-3 border-indigo-900 rounded-2xl shadow-md" src="https://storage.googleapis.com/andreassens.appspot.com/Frej%20Andreassen%20016.jpg" alt="Picture of Frej Andreassen"/>
               </div>
-              <div className="w-full lg:w-1/2 px-4">
+              <div className="w-full lg:w-1/2 md:px-4">
                 <span className="inline-flex mb-6 h-6 items-center justify-center text-xs font-extrabold px-2 text-indigo-900 rounded border-2 border-indigo-900 bg-green-200 uppercase shadow-sm">About me</span>
                 <p className="text-xl font-bold text-gray-400 mb-2">Last updated <Moment locale="sv" format="MMMM YYYY">{cv.settings.lastUpdate}</Moment></p>
                 <h1 className="text-3xl md:text-4xl font-extrabold font-heading mb-4">Hi, I am Frej Andreassen</h1>
@@ -59,7 +59,7 @@ export default function About({ cv }) {
               </div>
             </div>
             <div className="flex flex-wrap mx-4">
-              <div className="w-full lg:w-2/5 px-4 mb-12 lg:mb-0">
+              <div className="w-full lg:w-2/5 md:px-4 mb-12 lg:mb-0">
                 <ul className="mb-12">
                   <li className="mb-8"><a className="inline-block text-xl hover:text-indigo-800 font-extrabold" href="#intro">Introduction</a></li>
                   <li className="mb-8"><a className="inline-block text-xl hover:text-indigo-800 font-extrabold" href="#jobs">Jobs</a></li>
@@ -91,7 +91,7 @@ export default function About({ cv }) {
                 </div>
                 <div>{copiedMessage}</div>
               </div>
-              <div className="w-full lg:w-3/5 px-4">
+              <div className="w-full lg:w-3/5 md:px-4">
                 <p id="intro" className="text-xl font-extrabold leading-7 pb-12 mb-12 border-b-3 border-indigo-900">{cv.aboutMe.profile.description}</p>
                 {/* JOBS */}
                 <h2 id="jobs" className="text-3xl font-extrabold mb-4">Jobs</h2>

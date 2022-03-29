@@ -1,7 +1,6 @@
 import axios from "axios"
 
 export default async function handler(req, res) {
-  console.log(process.env.SLACK_WEBHOOK_URL)
   await axios.post(process.env.SLACK_WEBHOOK_URL,
              req.body,
              {

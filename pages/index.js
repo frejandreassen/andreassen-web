@@ -52,7 +52,7 @@ export default function Home({ projects }) {
         <TopNav/>
 
         <section className="py-26 bg-white">
-          <div className="container px-4 mx-auto">
+          <div className="container md:px-4 mx-auto">
             <div className="max-w-4xl mx-auto mb-16 text-center">
               <span className="text-lg font-extrabold text-indigo-500">Frej Andreassen Web</span>
               <h1 className="text-3xl md:text-4xl font-extrabold font-heading mt-2 mb-4">My passion is to learn and build for the dezentralized future</h1>
@@ -104,7 +104,7 @@ export default function Home({ projects }) {
             </div>
             <div className="flex flex-wrap mx-4 mb-8">
               {filteredProjects.slice(0, MAX_DISPLAY).map((project, i) => (
-                <div key={i} className="w-full lg:w-1/2 px-4 mb-8">
+                <div key={i} className="w-full lg:w-1/2 md:px-4 mb-8">
                   <div className="bg-white border-3 border-indigo-900 shadow-md rounded-2xl overflow-hidden">
                     <img className="h-64 md:h-96 w-full block object-cover" src={project.coverImageUrl} alt={project.coverImageAltText} />
                     <div className="px-6 py-8 md:p-10 border-t-3 border-indigo-900">
