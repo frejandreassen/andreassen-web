@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 const Footer = () => {
   const d = new Date()
@@ -15,7 +16,20 @@ const Footer = () => {
                 </a>
               </div>
               <div className="w-full lg:w-auto mb-12 lg:mb-0">
-                <div className="flex flex-wrap items-center justify-center"><a className="inline-block mr-4 md:mr-16 2xl:mr-20 text-lg font-extrabold hover:text-indigo-800" href="#">Product</a><a className="inline-block mr-4 md:mr-16 2xl:mr-20 text-lg font-extrabold hover:text-indigo-800" href="#">Features</a><a className="inline-block mr-4 md:mr-16 2xl:mr-20 text-lg font-extrabold hover:text-indigo-800" href="#">Pricing</a><a className="inline-block text-lg font-extrabold hover:text-indigo-800" href="#">Resources</a></div>
+                <div className="flex flex-wrap items-center justify-center">
+                <Link href="/blog"><a className="inline-block mr-4 md:mr-16 2xl:mr-20 text-lg font-extrabold hover:text-indigo-800">
+                    Blog
+                  </a></Link>
+                  <Link href="/projects"><a className="inline-block mr-4 md:mr-16 2xl:mr-20 text-lg font-extrabold hover:text-indigo-800" >
+                    Projects
+                  </a></Link>
+                  <Link href="/about"><a className="inline-block mr-4 md:mr-16 2xl:mr-20 text-lg font-extrabold hover:text-indigo-800" >
+                    About
+                  </a></Link>
+                  <Link href="/contact"><a className="inline-block text-lg font-extrabold hover:text-indigo-800" >
+                    Contact
+                  </a></Link>
+                </div>
               </div>
               <div className="w-full lg:w-auto flex items-center justify-center">
                 <a className="inline-block text-indigo-900 hover:text-indigo-800 mr-8" href="https://github.com/frejandreassen">

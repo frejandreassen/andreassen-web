@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&display=swap"/>
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png"></link>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png"></link>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className="antialiased bg-body text-body font-body">
