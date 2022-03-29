@@ -16,7 +16,8 @@ const MAX_DISPLAY = 100
 
 export default function Projects({ projects }) {
   const [filteredProjects, setFilteredProjects] = useState(projects)
-  const [activeCategory, setActiveCategory] = useState('');
+  const [activeCategory, setActiveCategory] = useState('')
+  const [search, setSearch] = useState('')
 
   const filterByCategory = (category) => {
     
@@ -31,6 +32,7 @@ export default function Projects({ projects }) {
   }
 
   const filterBySearch = (search) => {
+    setSearch(search)
     setActiveCategory('')
     const result = projects.filter((project) => 
     { const searchContent = project.title + project.description + project.content + project.categories.join('')
@@ -64,9 +66,17 @@ export default function Projects({ projects }) {
                   </svg>
                 </a>
                 <input 
+                  id="search"
+                  value={search}
                   onChange={(e) => filterBySearch(e.target.value)}
-                  className="w-full bg-transparent px-3 text-lg font-extrabold text-indigo-900 placeholder-indigo-900 outline-none" type="search" placeholder="Search"/>
+                  className="w-full bg-white px-3 text-lg font-extrabold text-indigo-900 placeholder-indigo-900 outline-none" placeholder="Search"/>
+                {search && <a onClick={() => filterBySearch('')} className="text-indigo-900 hover:text-indigo-800" >
+                  <svg width="24" height="24" viewBox="0 0 24 24"  stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 18L18 6M6 6l12 12" fill="#171952"></path>
+                  </svg>
+                </a>}
               </div>
+              
             </div>
             <div className="mb-10">
               <div className="lg:flex items-center mb-4">
