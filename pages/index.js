@@ -120,7 +120,13 @@ export default function Home({ projects }) {
                 </div>
               ))}
             </div>
-            <div className="mt-20 text-center"><a className="inline-block py-4 px-12 text-center leading-6 text-lg text-white font-extrabold bg-indigo-800 hover:bg-indigo-900 border-3 border-indigo-900 shadow rounded transition duration-200" href="#">Show more</a></div>
+            <div className="mt-20 text-center">
+              <Link href="/projects">
+              <a className="inline-block py-4 px-12 text-center leading-6 text-lg text-white font-extrabold bg-indigo-800 hover:bg-indigo-900 border-3 border-indigo-900 shadow rounded transition duration-200">
+                Show more
+              </a>
+              </Link>
+            </div>
           </div>
         </section>
 

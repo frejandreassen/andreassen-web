@@ -28,7 +28,7 @@ const TopNav = () => {
           </button>
         </div>
         <ul className="hidden xl:flex mr-12">
-          <li><Link href="/blog"><a className="text-lg mr-10 2xl:mr-16 font-extrabold hover:text-indigo-800" >Blog</a></Link></li>
+          {/* <li><Link href="/blog"><a className="text-lg mr-10 2xl:mr-16 font-extrabold hover:text-indigo-800" >Blog</a></Link></li> */}
           <li><Link href="/projects"><a className="text-lg mr-10 2xl:mr-16 font-extrabold hover:text-indigo-800" >Projects</a></Link></li>
           <li><Link href="/about"><a className="text-lg font-extrabold hover:text-indigo-800" >About</a></Link></li>
         </ul>
@@ -58,7 +58,7 @@ const TopNav = () => {
           </div>
           <div>
             <ul>
-              <li className="mb-1"><Link href="/blog"><a className="block p-4 text-lg font-extrabold hover:bg-gray-50 rounded" href="#">Blog</a></Link></li>
+              {/* <li className="mb-1"><Link href="/blog"><a className="block p-4 text-lg font-extrabold hover:bg-gray-50 rounded" href="#">Blog</a></Link></li> */}
               <li className="mb-1"><Link href="/projects"><a className="block p-4 text-lg font-extrabold hover:bg-gray-50 rounded" href="#">Projects</a></Link></li>
               <li className="mb-1"><Link href="/about"><a className="block p-4 text-lg font-extrabold hover:bg-gray-50 rounded" href="#">About</a></Link></li>
             </ul>
