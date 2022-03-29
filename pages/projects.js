@@ -12,9 +12,9 @@ export async function getStaticProps() {
   return { props: { projects }, revalidate: 10, }
 }
 
-const MAX_DISPLAY = 4
+const MAX_DISPLAY = 100
 
-export default function Home({ projects }) {
+export default function Projects({ projects }) {
   const [filteredProjects, setFilteredProjects] = useState(projects)
   const [activeCategory, setActiveCategory] = useState('');
 
@@ -42,7 +42,7 @@ export default function Home({ projects }) {
   return (
     <div>
       <Head>        
-        <title>Frej Andreassen Web</title>
+        <title>Projects - Frej Andreassen</title>
         <meta charSet="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <meta name="description" content="Frej Andreassen website"/>
@@ -54,9 +54,9 @@ export default function Home({ projects }) {
         <section className="py-26 bg-white">
           <div className="container px-4 mx-auto">
             <div className="max-w-4xl mx-auto mb-16 text-center">
-              <span className="text-lg font-extrabold text-indigo-500">Frej Andreassen Web</span>
-              <h1 className="text-3xl md:text-4xl font-extrabold font-heading mt-2 mb-4">My passion is to learn and build for the dezentralized future</h1>
-              <p className="text-xl font-extrabold leading-8 mb-12">Learning projects and portfolio within web development, web3 and startups </p>
+              <span className="text-lg font-extrabold text-indigo-500">Projects</span>
+              <h1 className="text-3xl md:text-4xl font-extrabold font-heading mt-2 mb-4">All projects</h1>
+              <p className="text-xl font-extrabold leading-8 mb-12">Browse through all projects within web development, web3 and startups </p>
               <div className="inline-flex w-full max-w-md p-4 items-center bg-white border-2 border-indigo-900 rounded shadow">
                 <a className="text-indigo-900 hover:text-indigo-800" href="#">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -119,13 +119,6 @@ export default function Home({ projects }) {
                   </div>
                 </div>
               ))}
-            </div>
-            <div className="mt-20 text-center">
-              <Link href="/projects">
-              <a className="inline-block py-4 px-12 text-center leading-6 text-lg text-white font-extrabold bg-indigo-800 hover:bg-indigo-900 border-3 border-indigo-900 shadow rounded transition duration-200">
-                Show more
-              </a>
-              </Link>
             </div>
           </div>
         </section>

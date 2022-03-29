@@ -43,19 +43,20 @@ export default function About({ cv }) {
                 <span className="inline-flex mb-6 h-6 items-center justify-center text-xs font-extrabold px-2 text-indigo-900 rounded border-2 border-indigo-900 bg-green-200 uppercase shadow-sm">About me</span>
                 <p className="text-xl font-bold text-gray-400 mb-2">Last updated <Moment locale="sv" format="MMMM YYYY">{cv.settings.lastUpdate}</Moment></p>
                 <h1 className="text-3xl md:text-4xl font-extrabold font-heading mb-4">Hi, I am Frej Andreassen</h1>
-                <span className="text-xl font-extrabold leading-8 mb-8 flex items-center">
-                  
-                  <a href="https://github.com/getmanfred/mac" className="hover:underline" target="_blank" rel="noreferrer">
-                    And this is my resume following the Manfred Awesomic CV standard
-                    <ExternalLinkIcon className="inline-flex h-5 w-5"/>
-                  </a>
-                </span>
                 <p className="text-xl font-extrabold leading-8 mb-8 flex items-center">
                   <a href="https://frejandreassen.github.io/cv/Frej_Andreassen_CV_MAC.json" className="hover:underline" target="_blank" rel="noreferrer">
                     Frej Andreassen CV MAC.json (Github)
                     <DownloadIcon className="inline-flex h-5 w-5"/>
                   </a>
                 </p>
+                <p className="text-xl font-extrabold leading-8 mb-8 flex items-center">
+                  
+                  <a href="https://github.com/getmanfred/mac" className="hover:underline" target="_blank" rel="noreferrer">
+                    Read more about the Manfred Awesomic CV (MAC) standard
+                    <ExternalLinkIcon className="inline-flex h-5 w-5"/>
+                  </a>
+                </p>
+                
               </div>
             </div>
             <div className="flex flex-wrap mx-4">

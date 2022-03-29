@@ -10,7 +10,7 @@ const TopNav = () => {
 
   return (
     <section>
-      <nav className="flex items-center bg-white py-6 px-10 relative">
+      <nav className="flex items-center bg-white py-6 px-6 md:px-10 relative">
         <Link href="/">
           <a className="text-lg font-bold mr-auto">
             <div className="flex items-center">
@@ -42,7 +42,7 @@ const TopNav = () => {
       </nav>
       {/* MOBILE MENU */}
       {mobileOpen && <div className="navbar-menu relative z-50">
-        <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+        {/* <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div> */}
         <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-full md:w-5/6 max-w-sm py-8 px-8 bg-white border-r overflow-y-auto">
           <div className="flex items-center mb-8">
             <Link href="/">
