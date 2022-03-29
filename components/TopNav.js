@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import ThemeSwitch from './ThemeSwitch';
 
 const TopNav = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -10,7 +11,7 @@ const TopNav = () => {
 
   return (
     <section>
-      <nav className="flex items-center bg-white py-6 px-6 md:px-10 relative">
+      <nav className="flex items-center bg-white dark:bg-gray-900 py-6 px-6 md:px-10 relative">
         <Link href="/">
           <a className="text-lg font-bold mr-auto">
             <div className="flex items-center">
@@ -20,7 +21,8 @@ const TopNav = () => {
           </a>
         </Link>
         <div className="xl:hidden">
-          <button className="navbar-burger focus:outline-none text-indigo-900 hover:text-indigo-800" onClick={handleDrawerToggle}>
+          <span className="mr-2"><ThemeSwitch/></span>
+          <button className="navbar-burger focus:outline-none text-indigo-900 dark:text-gray-400 hover:text-indigo-800" onClick={handleDrawerToggle}>
             <svg className="block h-6 w-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <title>Mobile menu</title>
               <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
@@ -28,6 +30,7 @@ const TopNav = () => {
           </button>
         </div>
         <ul className="hidden xl:flex mr-12">
+          <li className="mr-10"><ThemeSwitch/></li>
           {/* <li><Link href="/blog"><a className="text-lg mr-10 2xl:mr-16 font-extrabold hover:text-indigo-800" >Blog</a></Link></li> */}
           <li><Link href="/projects"><a className="text-lg mr-10 2xl:mr-16 font-extrabold hover:text-indigo-800" >Projects</a></Link></li>
           <li><Link href="/about"><a className="text-lg font-extrabold hover:text-indigo-800" >About</a></Link></li>
@@ -43,11 +46,11 @@ const TopNav = () => {
       {/* MOBILE MENU */}
       {mobileOpen && <div className="navbar-menu relative z-50">
         {/* <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div> */}
-        <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-full md:w-5/6 max-w-sm py-8 px-8 bg-white border-r overflow-y-auto">
+        <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-full md:w-5/6 max-w-sm py-8 px-8 bg-white dark:bg-gray-900 border-r overflow-y-auto">
           <div className="flex items-center mb-8">
             <Link href="/">
               <a className="mr-auto text-2xl font-bold leading-none">
-                <img className="h-6" src="nigodo-assets/logo-nigodo.svg" alt="" width="auto"/>
+                <img className="h-6 rounded-full" src="https://storage.googleapis.com/andreassens.appspot.com/frej_andreassen_pfp.jpg" alt="" width="auto"/>
               </a>
             </Link>
             <button className="navbar-close" onClick={handleDrawerToggle}>

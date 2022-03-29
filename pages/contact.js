@@ -47,7 +47,7 @@ const Contact = () => {
       </Head>
       <TopNav />
 
-      <section className="py-26 bg-white">
+      <section className="py-26 bg-white dark:bg-gray-900">
         <div className="container md:px-4 mx-auto">
           <div className="flex flex-wrap mx-4 mb-16 items-center">
             <div className="w-full lg:w-1/2 md:px-4 mb-8 lg:mb-0">
@@ -123,14 +123,14 @@ const Contact = () => {
               </div>
             </div>
             <div className="w-full lg:w-1/2 md:px-4">
-              <div className="px-6 py-12 md:px-12 bg-white border-3 border-indigo-900 rounded-2xl shadow-md">
+              <div className="px-6 py-12 md:px-12 bg-white dark:bg-gray-900 border-3 border-indigo-900 rounded-2xl shadow-md">
                 <form onSubmit={formik.handleSubmit}>
                   <div className="mb-8">
                     <label className="block mb-2 font-extrabold" htmlFor="email">Email</label>
                     <input 
                       required 
                       id="email" 
-                      className="inline-block w-full p-4 text-lg font-extrabold placeholder-indigo-900 shadow border-2 border-indigo-900 rounded outline-none" 
+                      className="inline-block w-full p-4 text-lg bg-white font-extrabold placeholder-indigo-900 shadow border-2 border-indigo-900 rounded outline-none" 
                       name="email" 
                       type="email" 
                       placeholder="yourmail@mail.com"
@@ -143,7 +143,7 @@ const Contact = () => {
                     <textarea 
                       required 
                       id="message" 
-                      className="w-full p-4 text-lg font-extrabold placeholder-indigo-900 shadow border-2 border-indigo-900 rounded resize-none" 
+                      className="w-full p-4 text-lg bg-white font-extrabold placeholder-indigo-900 shadow border-2 border-indigo-900 rounded resize-none" 
                       name="message" 
                       cols="30" 
                       rows="10" 

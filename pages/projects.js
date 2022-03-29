@@ -51,10 +51,10 @@ export default function Projects({ projects }) {
       <div>
         <TopNav/>
 
-        <section className="py-26 bg-white">
+        <section className="py-26 bg-white dark:bg-gray-900">
           <div className="container px-4 mx-auto">
             <div className="max-w-4xl mx-auto mb-16 text-center">
-              <span className="text-lg font-extrabold text-indigo-500">Projects</span>
+              <span className="text-lg font-extrabold text-indigo-500 dark:text-gray-400">Projects</span>
               <h1 className="text-3xl md:text-4xl font-extrabold font-heading mt-2 mb-4">All projects</h1>
               <p className="text-xl font-extrabold leading-8 mb-12">Browse through all projects within web development, web3 and startups </p>
               <div className="inline-flex w-full max-w-md p-4 items-center bg-white border-2 border-indigo-900 rounded shadow">
@@ -105,7 +105,7 @@ export default function Projects({ projects }) {
             <div className="flex flex-wrap mx-4 mb-8">
               {filteredProjects.slice(0, MAX_DISPLAY).map((project, i) => (
                 <div key={i} className="w-full lg:w-1/2 md:px-4 mb-8">
-                  <div className="bg-white border-3 border-indigo-900 shadow-md rounded-2xl overflow-hidden">
+                  <div className="bg-white dark:bg-gray-900 border-3 border-indigo-900 shadow-md rounded-2xl overflow-hidden">
                     <img className="h-64 md:h-96 w-full block object-cover" src={project.coverImageUrl} alt={project.coverImageAltText} />
                     <div className="px-6 py-8 md:p-10 border-t-3 border-indigo-900">
                       {project.categories.map((category,i) => (

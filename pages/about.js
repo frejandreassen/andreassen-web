@@ -33,7 +33,7 @@ export default function About({ cv }) {
       <div>
         <TopNav/>
 
-        <section className="py-26 bg-white lg:w-11/12">
+        <section className="py-26 bg-white dark:bg-gray-900">
           <div className="container md:px-4 mx-auto">
             <div className="flex flex-wrap mx-4 mb-12 items-center">
               <div className="w-full lg:w-1/2 md:px-4 mb-8 lg:mb-0">

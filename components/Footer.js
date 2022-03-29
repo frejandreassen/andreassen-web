@@ -6,7 +6,7 @@ const Footer = () => {
   const year = d.getFullYear()
   return (
     <section>
-      <div className="pt-26 border-3 border-l-0 border-r-0 border-indigo-900">
+      <div className="pt-26 border-3 border-l-0 border-r-0 border-indigo-900 dark:bg-gray-900">
         <div className="pb-16 border-b-3 border-indigo-900">
           <div className="container px-4 mx-auto text-center">
             <div className="flex flex-wrap justify-between items-center">
