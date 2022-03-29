@@ -1,7 +1,8 @@
 import axios from "axios"
 
 export default async function handler(req, res) {
-  await axios.post('https://hooks.slack.com/services/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',
+  console.log(process.env.SLACK_WEBHOOK_URL)
+  await axios.post(process.env.SLACK_WEBHOOK_URL,
              req.body,
              {
               headers: {
