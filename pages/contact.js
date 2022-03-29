@@ -130,10 +130,10 @@ const Contact = () => {
                     <input 
                       required 
                       id="email" 
-                      className="inline-block w-full p-4 text-lg bg-white font-extrabold placeholder-indigo-900 shadow border-2 border-indigo-900 rounded outline-none" 
+                      className="inline-block w-full p-4 text-lg dark:bg-gray-900 font-extrabold placeholder-indigo-900 dark:placeholder-white shadow border-2 border-indigo-900 rounded outline-none" 
                       name="email" 
                       type="email" 
-                      placeholder="yourmail@mail.com"
+                      placeholder="you@mail.com"
                       onChange={formik.handleChange}
                       value={formik.values.email}
                       />
@@ -143,7 +143,7 @@ const Contact = () => {
                     <textarea 
                       required 
                       id="message" 
-                      className="w-full p-4 text-lg bg-white font-extrabold placeholder-indigo-900 shadow border-2 border-indigo-900 rounded resize-none" 
+                      className="w-full p-4 text-lg dark:bg-gray-900 font-extrabold placeholder-indigo-900 dark:placeholder-white shadow border-2 border-indigo-900 rounded resize-none" 
                       name="message" 
                       cols="30" 
                       rows="10" 

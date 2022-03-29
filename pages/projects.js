@@ -8,7 +8,7 @@ import Footer from '../components/Footer'
 import { getProjects } from '../lib/api'
 
 export async function getStaticProps() {
-  const {projects} = await getProjects()
+  const projects = await getProjects()
   return { props: { projects }, revalidate: 10, }
 }
 
