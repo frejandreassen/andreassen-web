@@ -9,7 +9,7 @@ const Custom404 = () => {
     <div>
       <Head>        
         <title>404 - Frej Andreassen Web</title>
-        <meta charset="utf-8"/>
+        <meta charSet="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <meta name="description" content="Page not found"/>
         <meta name="author" content="Frej Andreassen"/>
@@ -17,8 +17,8 @@ const Custom404 = () => {
       <TopNav/>
 
       <section className="py-26 md:py-48 min-h-screen md:min-h-0 bg-orange-200 relative overflow-hidden">
-        <img className="absolute bottom-0 md:top-0 right-0 w-1/2 md:w-1/3 md:h-full" src="nigodo-assets/background-elements/pattern-two-smashes-orange-right.svg" alt=""/>
-        <img className="absolute top-0 left-0 w-2/3 md:h-full" src="nigodo-assets/background-elements/pattern-dots-big-orange-left.svg" alt=""/>
+        <img className="absolute bottom-0 md:top-0 right-0 w-1/2 md:w-1/3 md:h-full" src="/nigodo-assets/background-elements/pattern-two-smashes-orange-right.svg" alt=""/>
+        <img className="absolute top-0 left-0 w-2/3 md:h-full" src="/nigodo-assets/background-elements/pattern-dots-big-orange-left.svg" alt=""/>
         <div className="container px-4 mx-auto relative">
           <div className="max-w-xl mx-auto text-center">
             <span className="inline-flex mb-6 h-6 items-center justify-center text-xs font-extrabold px-2 text-indigo-900 rounded border-2 border-indigo-900 bg-green-200 uppercase shadow-sm">Error 404</span>
@@ -38,7 +38,9 @@ const Custom404 = () => {
             </div>
           </div>
         </div>
+        <img src="/nigodo-assets/background-elements/pattern-two-smashes-orange-right.svg" alt=""/>
       </section>
+      
 
       <Footer/>
     </div>

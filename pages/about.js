@@ -25,7 +25,7 @@ export default function About({ cv }) {
     <div>
       <Head>        
         <title>About - Frej Andreassen Web</title>
-        <meta charset="utf-8"/>
+        <meta charSet="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <meta name="description" content="About Frej Andreassen"/>
         <meta name="author" content="Frej Andreassen"/>
@@ -35,7 +35,7 @@ export default function About({ cv }) {
 
         <section className="py-26 bg-white lg:w-11/12">
           <div className="container px-4 mx-auto">
-            <div className="flex flex-wrap -mx-4 mb-12 items-center">
+            <div className="flex flex-wrap mx-4 mb-12 items-center">
               <div className="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
                 <img className="block w-full border-3 border-indigo-900 rounded-2xl shadow-md" src="https://storage.googleapis.com/andreassens.appspot.com/Frej%20Andreassen%20016.jpg" alt="Picture of Frej Andreassen"/>
               </div>
@@ -58,7 +58,7 @@ export default function About({ cv }) {
                 </p>
               </div>
             </div>
-            <div className="flex flex-wrap -mx-4">
+            <div className="flex flex-wrap mx-4">
               <div className="w-full lg:w-2/5 px-4 mb-12 lg:mb-0">
                 <ul className="mb-12">
                   <li className="mb-8"><a className="inline-block text-xl hover:text-indigo-800 font-extrabold" href="#intro">Introduction</a></li>

@@ -40,7 +40,7 @@ const Contact = () => {
     <div>
       <Head>        
         <title>Contact - Frej Andreassen Web</title>
-        <meta charset="utf-8"/>
+        <meta charSet="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <meta name="description" content="Contact Frej Andreassen"/>
         <meta name="author" content="Frej Andreassen"/>
@@ -49,7 +49,7 @@ const Contact = () => {
 
       <section className="py-26 bg-white">
         <div className="container px-4 mx-auto">
-          <div className="flex flex-wrap -mx-4 mb-16 items-center">
+          <div className="flex flex-wrap mx-4 mb-16 items-center">
             <div className="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
               <div className="max-w-xl">
                 <span className="text-lg font-extrabold text-indigo-500">Contact</span>
@@ -64,9 +64,9 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-wrap -mx-4 mb-16 items-center">
+          <div className="flex flex-wrap mx-4 mb-16 items-center">
             <div className="w-full lg:w-1/2 px-4 mb-16 lg:mb-0">
-              <div className="flex flex-wrap -mx-4">
+              <div className="flex flex-wrap mx-4">
                 <div className="w-full sm:w-1/2 px-4 mb-12">
                   <div className="inline-flex mb-8 w-20 h-20 items-center justify-center bg-white text-indigo-900 border-3 border-indigo-900 rounded-full shadow-md">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
