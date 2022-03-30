@@ -55,8 +55,26 @@ const Project = ({ project }) => {
                 dark:text-gray-200
                 prose-headings:text-indigo-900 dark:prose-headings:text-white
                 prose-blockquote:text-indigo-900 dark:prose-blockquote:text-gray-200
+                prose-a:text-indigo-900 dark:prose-a:text-gray-200
                 max-w-none mx-4">
-                <ReactMarkdown>
+                <ReactMarkdown
+                  components={{
+                      p: ({ node, children }) => {
+                          if (node.children[0].tagName === "img") {
+                              const image = node.children[0];
+                              return (
+                                <img 
+                                  className="block w-full mb-12 h-112 lg:h-140 object-cover border-3 border-indigo-900 rounded-2xl shadow-lg" 
+                                  src={image.properties.src}
+                                  alt={image.properties.alt} 
+                                  />
+                              );
+                          }
+                          // Return default child if it's not an image
+                          return <p>{children}</p>;
+                      },
+                  }}
+                >
                   {project.content}
                 </ReactMarkdown>
               </div>

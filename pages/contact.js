@@ -133,7 +133,7 @@ const Contact = () => {
                       className="inline-block w-full p-4 text-lg dark:bg-gray-900 font-extrabold placeholder-indigo-900 dark:placeholder-white shadow border-2 border-indigo-900 rounded outline-none" 
                       name="email" 
                       type="email" 
-                      placeholder="you@mail.com"
+                      placeholder="your@mail.com"
                       onChange={formik.handleChange}
                       value={formik.values.email}
                       />
