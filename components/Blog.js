@@ -84,7 +84,7 @@ const Blog = ({projects, MAX_DISPLAY}) => {
           </button>
           </div>
       </div>
-      <div className="flex flex-wrap mx-4 mb-8">
+      <div className="flex flex-wrap md:mx-4 mb-8">
         {filteredProjects.slice(0, MAX_DISPLAY).map((project, i) => (
           <div key={i} className="w-full lg:w-1/2 md:px-4 mb-8">
             <div className="bg-white dark:bg-gray-900 border-3 border-indigo-900 shadow-md rounded-2xl overflow-hidden">
