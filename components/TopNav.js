@@ -11,7 +11,7 @@ const TopNav = () => {
 
   return (
     <section>
-      <nav className="flex items-center bg-white dark:bg-gray-900 py-6 px-6 md:px-10 relative">
+      <nav className="flex items-center bg-white dark:bg-gray-900 py-6 px-6 md:px-10 relative print:hidden">
         <Link href="/">
           <a className="text-lg font-bold mr-auto">
             <div className="flex items-center">

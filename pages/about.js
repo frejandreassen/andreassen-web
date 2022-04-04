@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import Head from 'next/head'
-import { ExternalLinkIcon, DownloadIcon, PuzzleIcon, CogIcon, OfficeBuildingIcon, AcademicCapIcon, TranslateIcon } from '@heroicons/react/outline'
+import { ExternalLinkIcon, DownloadIcon, PuzzleIcon, CogIcon, OfficeBuildingIcon, AcademicCapIcon, TranslateIcon, PrinterIcon, MailIcon, PhoneIcon } from '@heroicons/react/outline'
 import { getLangNameFromCode } from 'language-name-map'
 import Moment from 'react-moment';
 import TopNav from '../components/TopNav'
@@ -8,6 +8,12 @@ import Footer from '../components/Footer'
 // import Header from '../components/Header/Header'
 
 import { getCV } from '../lib/api'
+
+const print = () => {
+  if (window && typeof window !== 'undefined') {
+      window.print()
+  }
+}
 
 export async function getStaticProps() {
   const cv = await getCV()
@@ -33,13 +39,37 @@ export default function About({ cv }) {
       <div>
         <TopNav/>
 
-        <section className="py-26 bg-white dark:bg-gray-900">
+        <section className="py-26 bg-white dark:bg-gray-900 print:py-10">
           <div className="container md:px-4 mx-auto">
-            <div className="flex flex-wrap mx-4 mb-12 items-center">
-              <div className="w-full lg:w-1/2 md:px-4 mb-8 lg:mb-0">
+            <div className="flex flex-wrap mx-4 mb-12 items-center print:justify-between print:items-start">
+              <div className="hidden print:block print:w-7/12">
+                <h1 className="text-3xl">Hi, I am Frej Andreassen</h1>
+                <p className="text-lg font-extrabold leading-8">Born: <Moment locale="sv" format="MMMM YYYY">{cv.aboutMe.profile.birthday}</Moment></p>
+                <p className="text-lg font-extrabold leading-8">Location: Falkenberg, Sweden</p>
+                <p className="text-lg font-extrabold leading-8 items-center"><a href="https://andreassens.se/about">CV printed from andreassens.se <ExternalLinkIcon className="inline-flex h-5 w-5 text-gray-400"/></a></p>
+                <p className="text-lg font-extrabold leading-8"><a href="mailto:frej@andreassens.se"><MailIcon className="inline-flex h-5 w-5 text-gray-400 mr-1"/> frej@andreassens.se</a></p>
+                <p className="text-lg font-extrabold leading-8"><a href="tel:+46706920705"><PhoneIcon className="inline-flex h-5 w-5 text-gray-400 mr-1"/> +46 70 6920705</a></p>
+                <p className="text-lg font-extrabold leading-8 flex items-center">
+                  <span className="text-gray-400 inline-flex mr-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                  </span>
+                  <a href="https://www.linkedin.com/in/frej-andreassen/">
+                    linkedin.com/in/frej-andreassen
+                  </a>
+                </p>
+                <p className="text-lg font-extrabold leading-8 flex items-center">
+                  <span className="text-gray-400 inline-flex mr-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </span>
+                  <a href="https://github.com/frejandreassen">
+                    github.com/frejandreassen
+                  </a>
+                </p>
+              </div>
+              <div className="w-full lg:w-1/2 md:px-4 mb-8 lg:mb-0 print:w-5/12">
                 <img className="block w-full border-3 border-indigo-900 rounded-2xl shadow-md" src="https://storage.googleapis.com/andreassens.appspot.com/Frej%20Andreassen%20016.jpg" alt="Picture of Frej Andreassen"/>
               </div>
-              <div className="w-full lg:w-1/2 md:px-4">
+              <div className="w-full lg:w-1/2 md:px-4 print:hidden">
                 <span className="inline-flex mb-6 h-6 items-center justify-center text-xs font-extrabold px-2 text-indigo-900 rounded border-2 border-indigo-900 bg-green-200 uppercase shadow-sm">About me</span>
                 <p className="text-xl font-bold text-gray-400 mb-2">Last updated <Moment locale="sv" format="MMMM YYYY">{cv.settings.lastUpdate}</Moment></p>
                 <h1 className="text-3xl md:text-4xl font-extrabold font-heading mb-4">Hi, I am Frej Andreassen</h1>
@@ -60,7 +90,7 @@ export default function About({ cv }) {
               </div>
             </div>
             <div className="flex flex-wrap mx-4">
-              <div className="w-full lg:w-2/5 md:px-4 mb-12 lg:mb-0">
+              <div className="w-full lg:w-2/5 md:px-4 mb-12 lg:mb-0 print:hidden">
                 <ul className="mb-12">
                   <li className="mb-8"><a className="inline-block text-xl hover:text-indigo-800 font-extrabold" href="#intro">Introduction</a></li>
                   <li className="mb-8"><a className="inline-block text-xl hover:text-indigo-800 font-extrabold" href="#jobs">Jobs</a></li>
@@ -100,7 +130,7 @@ export default function About({ cv }) {
                   <div key={i}>
                     <div className="flex justify-between mt-5">
                       <div className="flex items-center">
-                        <OfficeBuildingIcon className="hidden md:block h-5 w-5 mr-5" />
+                        <OfficeBuildingIcon className="hidden md:block h-5 w-5 mr-5 print:block print:text-indigo-900" />
                         <h3 className="text-2xl font-extrabold mb-0">{job.organization.name}</h3>
                       </div>
                       <span className="inline-flex mb-0 h-6 items-center justify-center text-xs font-extrabold px-2 text-indigo-900 rounded border-2 border-indigo-900 bg-green-200 uppercase shadow-sm">{job.type}</span>
@@ -128,7 +158,7 @@ export default function About({ cv }) {
                           {role.challenges.map((challenge, i) => (
                             <div key={i} className="text-xl mt-3">
                               <div className="inline-flex items-center">
-                                <PuzzleIcon className="hidden md:block h-5 w-5 text-gray-400 mr-5"/>
+                                <PuzzleIcon className="hidden md:block h-5 w-5 text-gray-400 mr-5 print:block"/>
                                 {challenge.description}
                               </div>
                               {challenge.actions && challenge.actions.map((action, i) => (
@@ -154,7 +184,7 @@ export default function About({ cv }) {
                   <div key={i}>
                     <div className="flex justify-between mt-5">
                       <div className="flex items-center">
-                        <AcademicCapIcon className="hidden md:block h-5 w-5 mr-5" />
+                        <AcademicCapIcon className="hidden md:block h-5 w-5 mr-5 print:block" />
                         <h3 className="text-2xl font-extrabold mb-0">{study.institution.name}</h3>
                       </div>
                       <span className="inline-flex mb-0 h-6 items-center justify-center text-xs font-extrabold px-2 text-indigo-900 rounded border-2 border-indigo-900 bg-blue-200 uppercase shadow-sm">{study.studyType}</span>
@@ -188,6 +218,9 @@ export default function About({ cv }) {
                   </span>
                 ))}
                 <hr className="my-20"/>
+                <button onClick={print}>
+                  <PrinterIcon className="h-5 w-5 mr-5 print:hidden" />
+                </button>
               </div>
             </div>
           </div>
